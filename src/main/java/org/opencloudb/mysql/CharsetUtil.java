@@ -140,6 +140,9 @@ public class CharsetUtil {
     }
 
     public static final String getCharset(int index) {
+    	if(INDEX_TO_CHARSET.length < (index-1)){
+    		return "utf8";
+    	}
         return INDEX_TO_CHARSET[index];
     }
 

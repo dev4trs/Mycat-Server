@@ -117,4 +117,11 @@
 	<function name="jump-consistent-hash" class="org.opencloudb.route.function.PartitionByJumpConsistentHash">
 		<property name="totalBuckets">3</property>
 	</function>
+	<function name="sharding-by-month-MS"
+		class="org.opencloudb.route.function.PartitionByMonthMSDate">
+		<property name="dateFormat">yyyy-MM-dd</property>
+		<property name="sBeginDate">2015-04-01</property>
+	</function>
+	<function name="partition-by-mpId" class="org.opencloudb.route.function.PartitionByMpId">
+	</function>
 </mycat:rule>

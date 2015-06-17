@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.opencloudb.mycat</groupId>
 	<artifactId>Mycat-server</artifactId>
-	<version>1.4-beta</version>
+	<version>1.5-dev</version>
 	<packaging>jar</packaging>
 	<name>Mycat-server</name>
 	<description>The project of Mycat-server</description>
@@ -23,6 +23,25 @@
 		<developerConnection>scm:git:ssh://apachemycat@github.com/MyCATApache/Mycat-Server.git</developerConnection>
 		<url>scm:git:ssh://apachemycat@github.com/MyCATApache/Mycat-Server.git</url>
 	</scm>
+	<repositories>
+		<repository>
+			<id>nexus</id>
+			<name>local private nexus</name>
+			<url>http://nexus.mycat.io/content/groups/public</url>
+		</repository>
+	</repositories>
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Internal Releases</name>
+			<url>http://nexus.mycat.io/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Internal Snapshots</name>
+			<url>http://nexus.mycat.io/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 	<dependencies>
 		<!-- <dependency> <groupId>com.google.guava</groupId> <artifactId>guava-parent</artifactId> 
 			<version>18.0</version> </dependency> -->
@@ -112,6 +131,11 @@
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.5.3</version>
+		</dependency>
+		<dependency>
+  		<groupId>com.sequoiadb.org</groupId>
+  		<artifactId>sequoiadb-java-driver</artifactId>
+ 			<version>1.0-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
